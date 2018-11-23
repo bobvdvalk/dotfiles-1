@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 BROWSER=/usr/bin/chromium
-EDITOR=/usr/bin/nano
+EDITOR="/usr/bin/vim +startinsert"
 
 function _update_ps1() {
     PS1="$(powerline-go \
@@ -44,5 +44,5 @@ eval $(thefuck --alias)
 
 # PATH
 export CDPATH=".:${HOME}:${GOPATH}/src/github.com"
-export PATH="${PATH}:$(find /opt -maxdepth 2 -name bin | paste -sd ':' -):${HOME}/.gem/ruby/2.5.0/bin"
+export PATH="${PATH}:$(find /opt -maxdepth 2 -path /opt/containerd -prune -o -name bin | paste -sd ':' -):${HOME}/.gem/ruby/2.5.0/bin"
 
