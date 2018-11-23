@@ -1,0 +1,7 @@
+[user]
+	name = Thomas Biesaart
+	email = thomas.biesaart@gmail.com
+[remote "origin"]
+	prune = true
+[core]
+	hooksPath = ./githooks

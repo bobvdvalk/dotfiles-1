@@ -1,0 +1,48 @@
+#!/bin/bash
+set -euo pipefail
+
+## Update Current Packages
+yay
+
+
+## Install Wanted Packages
+workaround="PACKAGES"
+package_list=$(sed -n -e "/### ${workaround} ###/,\$p" "${BASH_SOURCE}" | grep -v '^ *$' | grep -v '^#' | tr '\n' ' ')
+yay --needed --noconfirm -S ${package_list}
+
+exit 0
+
+### PACKAGES ###
+
+# Programming Languages
+jdk8
+go
+npm
+ruby
+
+# Development Tools
+maven
+terraform
+docker
+docker-compose
+postman-bin
+
+# Editors
+vim
+jetbrains-toolbox
+
+# Communication
+telegram-desktop-bin
+slack-desktop
+
+# Utilities
+powerline-go-bin
+powerline-fonts
+numlockx
+xclip
+thefuck
+mc-agent
+
+# Media
+spotify
+synology-drive

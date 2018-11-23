@@ -1,0 +1,20 @@
+### Ignore Everything by Default
+/*
+
+### Essentials
+!/.gitignore
+!/.bashrc
+
+### Configurations
+!/.config
+/.config/*
+
+!/.gitconfig
+!/.config/i3
+
+### Scripts
+!/bin
+/bin/*
+
+!/bin/g
+!/bin/packages
