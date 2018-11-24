@@ -23,6 +23,7 @@ ruby
 # Development Tools
 maven
 terraform
+packer
 docker
 docker-compose
 postman-bin
