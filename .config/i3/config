@@ -39,27 +39,15 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ntilde focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ntilde move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -81,9 +69,6 @@ bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -217,11 +202,9 @@ bindsym $mod+F6 exec mocp --stop
 bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
-# App shortcuts
-bindsym $mod+w exec "/usr/bin/chromium"
-bindsym $mod+n exec "/usr/bin/thunar"
 
-# Redirect sound to headphones
+# Screenshot
+bindsym $mod+Print --release exec scrot -s -e 'xclip -selection clipboard -t image/png "$f" && rm "$f"'
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 # Autostart apps
@@ -229,4 +212,3 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
 exec --no-startup-id "nitrogen --restore"
-exec --no-startup-id "sleep 2s && kalu"
