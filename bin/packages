@@ -27,6 +27,8 @@ packer
 docker
 docker-compose
 postman-bin
+asciidoctor
+saxon-he
 
 # Editors
 vim
