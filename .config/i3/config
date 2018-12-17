@@ -110,7 +110,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock
-bindsym $mod+l exec i3lock -e --color 475263
+bindsym $mod+l exec i3lock -e --color 000000
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -138,9 +138,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color            #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
+set $bg-color            #000000
+set $inactive-bg-color   #000000
+set $text-color          #42a6ff
 set $inactive-text-color #676e7d
 set $urgent-bg-color     #e53935
 set $indicator-color     #a0a0a0
