@@ -39,6 +39,7 @@ telegram-desktop-bin
 slack-desktop
 
 # Utilities
+deepin-terminal
 powerline-go-bin
 powerline-fonts
 numlockx
