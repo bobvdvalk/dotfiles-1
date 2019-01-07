@@ -205,6 +205,7 @@ bindsym $mod+F8 exec mocp --next
 
 # Screenshot
 bindsym $mod+Print --release exec scrot -s -e 'xclip -selection clipboard -t image/png "$f" && rm "$f"'
+bindsym $mod+Shift+Print --release exec scrot -d 3 -s -e 'xclip -selection clipboard -t image/png "$f" && mv "$f" ~/Downloads'
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 # Autostart apps
