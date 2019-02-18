@@ -31,14 +31,6 @@ PATH="${PATH}:${NPM_PACKAGES}/bin:node_modules/.bin"
 unset MANPATH
 export MANPATH="${NPM_PACKAGES}/share/man:$(manpath)"
 
-# MC AGENT
-if ! pgrep -u "${USER}" mc-agent > /dev/null; then
-    mc-agent > ~/.mc-agent-env
-fi
-if [[ "${SSH_AUTH_SOCK}" == "" ]]; then
-    eval "$(<~/.mc-agent-env)"
-fi
-
 # FUCK
 eval $(thefuck --alias)
 
