@@ -22,7 +22,7 @@ if [ "$TERM" != "linux" ]; then
 fi
 
 # GO
-export GOPATH="${HOME}"
+export GOPATH="${HOME}/.go"
 PATH="${PATH}:${GOPATH}/bin"
 
 # NPM
@@ -35,6 +35,6 @@ export MANPATH="${NPM_PACKAGES}/share/man:$(manpath)"
 eval $(thefuck --alias)
 
 # PATH
-export CDPATH=".:${HOME}:${GOPATH}/src/github.com"
-export PATH="${PATH}:$(find /opt -maxdepth 2 -path /opt/containerd -prune -o -name bin | paste -sd ':' -):${HOME}/.gem/ruby/2.5.0/bin"
+export CDPATH=".:${HOME}/Projects"
+export PATH="${PATH}:${HOME}/bin:$(find /opt -maxdepth 2 -path /opt/containerd -prune -o -name bin | paste -sd ':' -):${HOME}/.gem/ruby/2.5.0/bin"
 
