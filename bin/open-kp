@@ -1,0 +1,17 @@
+#!/bin/bash
+
+KEEPASS="${1}/KeePass/KeePass.exe"
+
+if [ -f "${KEEPASS}" ]; then
+	echo "Launching KeePass"
+	"${KEEPASS}" &
+	while [ -f "${KEEPASS}" ]; do
+		sleep 2
+	done
+	echo "Killing KeePass"
+	kill %1
+	i3lock -e --color 000000	
+else
+	xdg-open "${1}"
+fi
+
