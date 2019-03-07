@@ -36,5 +36,5 @@ eval $(thefuck --alias)
 
 # PATH
 export CDPATH=".:${HOME}/Projects"
-export PATH="${PATH}:${HOME}/bin:$(find /opt -maxdepth 2 -path /opt/containerd -prune -o -name bin | paste -sd ':' -):${HOME}/.gem/ruby/2.5.0/bin"
+export PATH="${PATH}:${HOME}/bin:${HOME}/bin/node_modules/.bin:$(find /opt -maxdepth 2 -path /opt/containerd -prune -o -name bin | paste -sd ':' -):${HOME}/.gem/ruby/2.5.0/bin"
 
