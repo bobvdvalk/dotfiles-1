@@ -38,3 +38,23 @@ eval $(thefuck --alias)
 export CDPATH=".:${HOME}/Projects"
 export PATH="${PATH}:${HOME}/bin:${HOME}/bin/node_modules/.bin:$(find /opt -maxdepth 2 -path /opt/containerd -prune -o -name bin | paste -sd ':' -):${HOME}/.gem/ruby/2.5.0/bin"
 
+
+command_not_found_handle() {
+  # Do not run within a pipe
+  if test ! -t 1; then
+    >&2 echo "command not found: $1"
+    return 127
+  fi
+  if which npx > /dev/null; then
+    echo "$1 not found. Trying with npx..." >&2
+  else
+    return 127
+  fi
+  if ! [[ $1 =~ @ ]]; then
+    npx --no-install "$@"
+  else
+    npx "$@"
+  fi
+  return $?
+}
+
