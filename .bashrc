@@ -12,7 +12,7 @@ function _update_ps1() {
     PS1="$(powerline-go \
         -error $? \
         -newline \
-        -path-aliases \~/src/github.com/xillio=Xillio,\~/src/github.com/chappio=ChappIO \
+        -path-aliases \~/Projects= \
         -modules venv,user,cwd,git
     )"
 }
