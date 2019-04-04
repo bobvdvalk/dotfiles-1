@@ -215,3 +215,4 @@ exec --no-startup-id nm-applet
 exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id synology-drive
 exec --no-startup-id udiskie --tray --automount --file-manager /home/chappio/bin/open-kp
+exec --no-startup-id /home/chappio/.screenlayout/default.sh
