@@ -27,6 +27,7 @@ packer
 docker
 docker-compose
 postman-bin
+insomnia
 asciidoctor
 saxon-he
 
